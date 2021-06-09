@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+	/*background: beige;*/
+font-family: 'Open Sans', sans-serif;
+
+}
+
+i, svg{
+	pointer-events: none;
+}
+
+.kick-pad, .snare-pad, .hihat-pad {
+	width: 5rem;
+	height: 5rem;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+}
+
+.kick-pad{
+	background: #ffea85;
+}
+
+.snare-pad {
+
+background: #f9b4b5;
+} 
+
+
+.hihat-pad {
+background: #9e9fff;
+
+}
+
+.kick-pad.active {
+	background: #ffd401;
+}
+
+
+@keyframes playTrack {
+	from {
+		transform: scale(1.0);
+	}
+
+	to {
+		transform: scale(1.2);
+	}
+}
+.snare-pad.active {
+
+background: #F76567;
+} 
+
+
+.hihat-pad.active {
+background: #6C6DF7;
+
+}
+.kick-track, .snare-track, .hihat-track {
+	display: flex;
+    align-items: center;
+	width: 70%;
+	justify-content: space-between;
+	margin-top: 5rem;
+
+}
+
+.sequencer {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.kick, .snare, .hihat {
+	display: flex;
+}
+
+.controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 2;
+	margin: 0rem 2rem;
+
+}
+
+
+.controls button {
+	padding: 1rem;
+	border: none;
+	background: #787777;
+	color: white;
+	border-radius: 10px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.pad {
+	/*border:  3px solid #000;*/
+	transition: all 0.5s ease;
+}
+
+.mute {
+	margin: 10px;
+}
+
+/*.mute:hover {
+
+background: #888888;
+}*/
+
+.play {
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	background: #504f4f;
+	border-radius: 20px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin-top: 3rem;
+
+}
+
+select {
+	padding: 1rem;
+	font-size: 1rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.mute.active {
+	background: #e0e0e0;
+	color: #98989f;
+}
+
+.tempo{
+	margin: 3rem;
+	width: 30%;	
+}
+
+.tempo-slider {
+	padding: .2rem;
+	-webkit-appearance: none;
+	margin: 1rem 0rem;
+	width: 100%;
+	position: relative;
+	background: #ffe566;
+	cursor: pointer;
+	border-radius: 20px;
+	
+
+}
+
+.tempo p {
+	font-size: 1.5rem;
+	margin: 2rem;
+	text-align: center;
+}
+
